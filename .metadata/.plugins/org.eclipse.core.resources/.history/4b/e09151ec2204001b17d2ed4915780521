@@ -1,0 +1,73 @@
+
+public class Sunlight {
+
+	 static int INF = 10000; 
+	  
+	    static class Point  
+	    { 
+	        double x; 
+	        double y; 
+	  
+	        public Point(double x, double y) 
+	        { 
+	            this.x = x; 
+	            this.y = y; 
+	        } 
+	        public double getX()
+	        {
+	        	return x;
+	        }
+	        public double getY()
+	        {
+	        	return y;
+	        }
+	    };
+	    
+	    static double findFisrstBuildingLength(Point building[],int n,Point s) {
+	    	
+	    	//System.out.println(building);
+	    	int k=building.length;
+	    	//System.out.println(k);
+	    	double m=building.length;
+	    	Point[] arr=new Point[k];
+	    	double h1;
+	    	boolean chk=false;
+	    	for(int i=0;i<k;i++)
+	    	{
+	    		arr[i]=building[i];
+	    		h1=arr[i].y;  //if sun is on roof of the building
+	    		if(h1<s.y)		//s.y should be greater than all the building of y axis
+	    		{
+	    			chk=true;
+	    		}
+	    	}
+	    	double dist=0;
+	    	
+	    	if(chk==true) {
+		    	if(m==4) {
+		    		
+		    		for(int i=0;i<2;i++)
+		    		{	    		
+		    			dist=dist+(Math.sqrt(Math.pow(arr[i+1].x-arr[i].x,2)+Math.pow(arr[i+1].y-arr[i].y,2)));	
+		    		}
+		    	}	
+	    	}	
+	    	return dist;
+	    }
+	    
+	    
+	
+	public static void main(String[] args) {
+		
+		Point building[]= {new Point(4,0),new Point(4,-5),new Point(7,-5),new Point(7,0)};
+		int b=building.length;
+		
+		int n=b/4;  //Total no of buildings....
+		//System.out.println(n);
+		Point s=new Point(1,1);
+		//1)find length of first building
+		System.out.println(findFisrstBuildingLength(building,n,s));
+
+	}
+
+}

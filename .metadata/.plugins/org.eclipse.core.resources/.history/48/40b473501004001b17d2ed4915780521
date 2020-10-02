@@ -1,0 +1,29 @@
+
+public class Sunlight {
+
+	 static int INF = 10000; 
+	  
+	    static class Point  
+	    { 
+	        double x; 
+	        double y; 
+	  
+	        public Point(double x, double y) 
+	        { 
+	            this.x = x; 
+	            this.y = y; 
+	        } 
+	    };
+	    
+	    
+	    
+	
+	public static void main(String[] args) {
+		
+		Point building[]= {new Point(1,8)
+				
+		};
+
+	}
+
+}

@@ -1,0 +1,61 @@
+
+public class Sunlight {
+
+	 static int INF = 10000; 
+	  
+	    static class Point  
+	    { 
+	        double x; 
+	        double y; 
+	  
+	        public Point(double x, double y) 
+	        { 
+	            this.x = x; 
+	            this.y = y; 
+	        } 
+	        public double getX()
+	        {
+	        	return x;
+	        }
+	        public double getY()
+	        {
+	        	return y;
+	        }
+	    };
+	    
+	    static int findFisrstBuildingLength(Point building[],int n,int s) {
+	    	
+	    	//System.out.println(building);
+	    	int k=building.length;
+	    	//System.out.println(k);
+	    	double m=building.length;
+	    	Point[] arr=new Point[k];
+	    	for(int i=0;i<=k;i++)
+	    	{
+	    		arr[i]=building[i];
+	    	}
+	    	for(int i=0;i<=k;i++)
+	    	{
+	    		System.out.println(arr[i].x+"  ");
+	    		System.out.println(arr[i].y+"  ");
+	    		System.out.println("----------------");
+	    	}
+	    	return 1;
+	    }
+	    
+	    
+	
+	public static void main(String[] args) {
+		
+		Point building[]= {new Point(4,0),new Point(4,-5),new Point(7,-5),new Point(7,0)};
+		int b=building.length;
+		
+		int n=b/4;  //Total no of buildings....
+		System.out.println(n);
+		Point s=new Point(1,1);
+		//1)find length of first building
+		findFisrstBuildingLength(building,n,s);
+
+	}
+
+}
